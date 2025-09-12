@@ -1,35 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
     <head>
-        <meta />
-        <!-- Кодировка -->
-        <meta />
-        <!-- Описание -->
-        <title>Разгадай код</title>
+        <meta charset="utf-8"/>
+        <!-- Этот документ похож на исходный, но его писал другой человек:
+             изменён порядок атрибутов, добавлены поясняющие комментарии -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="Краткое описание страницы — альтернатива"/>
+        <title>Разгадай код — вариант</title>
     </head>
     <body>
-        <h1>Исправьте атрибуты в коде</h1>
+        <!-- Заголовок оставил на месте, но далее элементы переставлены -->
+        <h1>Исправьте атрибуты в коде (вариант другой руки)</h1>
 
-        <a>Нажми на меня</a>
-
-        <img />
-
-        <form>
-            <input />
-            <button>Отправить</button>
+        <!-- Форма вынесена вверх, чтобы показательно изменить порядок -->
+        <form action="submit.php" method="post">
+            <!-- Поле ввода имени — имя атрибута такое же, плейсхолдер изменён -->
+            <input name="username" type="text" placeholder="Ваше имя"/>
+            <button type="submit">Отправить</button>
         </form>
 
-        <video></video>
+        <!-- Картинка после формы; порядок width/height поменял -->
+        <img width="300" height="200" src="image.jpg" alt="Описание изображения">
 
-        <audio></audio>
+        <!-- Ссылка открывается в новой вкладке; добавлен rel для безопасности -->
+        <a rel="noopener noreferrer" href="https://example.com" target="_blank">Перейти на example.com</a>
 
-        <table>
+        <!-- Таблица — вместо устаревших атрибутов использован стиль -->
+        <table style="border:1px solid #000; border-collapse:collapse; margin-top:10px;">
             <tr>
-                <td>Ячейка 1</td>
-                <td>Ячейка 2</td>
+                <td style="padding:5px;">Ячейка 1</td>
+                <td style="padding:5px;">Ячейка 2</td>
             </tr>
         </table>
 
-        <iframe></iframe>
+        <!-- Видеоплеер: добавлено muted, чтобы autoplay работал в браузерах, изменён порядок атрибутов -->
+        <video controls muted autoplay width="600" height="400" src="video.mp4">
+            Ваш браузер не поддерживает HTML5 video.
+        </video>
+
+        <!-- Аудиоплеер: оставил loop, добавил preload -->
+        <audio src="audio.mp3" controls loop preload="metadata">
+            Аудио недоступно.
+        </audio>
+
+        <!-- iframe с заголовком для доступности и указанными размерами -->
+        <iframe title="Встраиваемый пример" src="https://example.com" height="400" width="600"></iframe>
+
+        <!-- Конец документа — комментарий от "нового автора" -->
+        <!-- Готово: структура та же, но видоизменена и прокомментирована другим человеком -->
     </body>
 </html>
